@@ -1,0 +1,178 @@
+#    -*- mode: org -*-
+#+TITLE:         Understanding-VFX
+#+AUTHOR:        Fundamentals of Compositing
+#+EMAIL:         avik.c@whistlingwoods.net
+
+#+REVEAL_INIT_OPTIONS: width:1200, height:800, margin: 0.1, minScale:0.2, maxScale:2.5, transition:'concave'
+#+OPTIONS: toc:nil num:nil
+#+REVEAL_THEME: beige
+#+REVEAL_HEAD_PREAMBLE: <meta name="description" content="Org-Reveal Introduction.">
+#+REVEAL_POSTAMBLE: <p> Created by aviik. </p>
+#+REVEAL_EXTRA_CSS: ./css/presentation.css
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
+* Compositing
+** REPRESENTATIONAL COMPOSITION 
+- Relationships of elements imitatively derived from without, objective elements with associative contents.
+- Example acoustical composition (speech exists side by side with music)
+- Ofcourse our context is Visual Effects
+*** Modern Day Visual Effects Compositing
+#+REVEAL: split
+**** CGI Compositing
+***** some text
+#+REVEAL: split
+**** Set Extension
+***** some text
+#+REVEAL: split
+**** Match Move
+***** some text
+#+REVEAL: split
+**** Chroma Compositing
+***** some text
+#+REVEAL: split
+**** Motion Tracking
+***** some text
+#+REVEAL: split
+**** Warping and Morphing
+***** some text
+#+REVEAL: split
+**** Bullet Time Shots
+***** some text
+#+REVEAL: split
+**** Crowd Duplication
+***** some text
+#+REVEAL: split
+**** Atmospherics
+***** some text
+#+REVEAL: split
+**** Rotoscoping
+***** some text
+#+REVEAL: split
+**** Wire Removal
+***** some text
+#+REVEAL: split
+**** Scene Salvage
+#+REVEAL: split
+** COLOUR COMPOSITION 
+*** Compositing Color
+- Color Space
+- Black and White Points
+- Color Adjustments
+- Gamma Slamming
+- Pre-Balancing Color Channels
+#+REVEAL: split
+**** Color Space
+#+REVEAL: split
+**** Black and White Points
+#+REVEAL: split
+**** Color Adjustments
+#+REVEAL: split
+**** Gamma Slamming
+#+REVEAL: split
+**** Pre-Balancing Color Channels
+* Formats as canvas
+** Structure of Digital Images
+*** The Pixel
+*** Color Images
+*** Image Channels
+*** Dots Per Inch (DPI)
+** Digital Image Metadata
+*** Digitizing Images
+*** Image Resolution
+*** Image Aspect Ratio
+*** Pixel Aspect Ratio
+*** Display Aspect Ratio
+*** Bit Depth
+*** Floating-Point
+*** Multiplying Images
+*** Image File Formats
+*** Photographic Images vs. Graphics
+*** Indexed Color Images (CLUT)
+*** Compression
+*** EXR
+*** File Formats 
+* Elements of VFX Compositing
+** CGI Compositing
+*** Premultiply
+*** Scaling the Background
+*** Semi-Transparent Pixels
+*** Summing the Layers
+*** Multipass Compositing
+*** Depth Compositing
+*** Multiplane Compositing
+*** Dynamics and Simulations
+*** Particle Effects
+** Key, Matte, Alpha, and Mask
+** Chroma Compositing
+*** Keyers
+**** Luma-Key
+**** Chroma-key
+**** Difference-Key
+*** How Keyers Work
+*** Pulling the Matte
+*** Despill
+*** Color Correction
+*** Scene Adjustment (scaling foreground or background)
+*** Making The Composite
+*** Before the keyer processes
+**** Garbage Mattes
+**** Denoise
+**** Grain Extraction
+** Rotoscoping
+*** Splines
+*** Motion Blur
+*** On 2’s
+** Image Blending
+*** Merge
+**** Screen
+**** Over
+**** Soft light
+**** Color Dodge
+**** Difference
+**** Plus
+*** Mix
+*** Add
+*** Subtract
+*** Multiply
+** Transforms
+*** Transform
+*** Pivot Points
+*** Corner Pin
+*** Animation
+**** Key Frame
+**** Procedural
+**** Expression
+*** Directional Blur
+*** Motion Blur
+*** Tracking
+**** Linear Track
+**** Planar Track
+**** Motion Tracking
+*** Stabilizing
+*** Matchmove
+*** Warp
+**** Mesh Warp
+**** Spline Warp
+
+** Scene Salvage
+*** Dust Busting
+*** Wire Removal
+*** Rig Removal
+*** Hair Removal
+*** Scratch Removal
+*** Light Leaks
+*** Deflicker
+*** Footage Processing
+**** Interlaced Videos
+**** Non-Square Pixels
+**** Frame Rate
+**** Coping with Time Code
+**** Compression Artifacts
+**** 3:2 Pull-Down
+**** 3:2 Pull-Up
+* Compositing Software
+** Node Based
+** Layer Based
+* Thank You
+- Notes Link:
+- Contact:    9967369456
+- email:      avik.c@whistlingwoods.net

@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Understanding-VFX</title>
+<meta name="author" content="(Fundamentals of Compositing)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/css/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/css/theme/beige.css" id="theme"/>
+
+<link rel="stylesheet" href="./css/presentation.css"/>
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<meta name="description" content="Org-Reveal Introduction.">
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h1 class="title">Understanding-VFX</h1><h2 class="author">Fundamentals of Compositing</h2><p class="date">Created: 2019-08-12 Mon 13:33</p>
+</section>
+<section>
+<section id="slide-org422a2dd">
+<h2 id="org422a2dd">Compositing</h2>
+<div class="outline-text-2" id="text-org422a2dd">
+</div>
+</section>
+<section id="slide-org1b744ab">
+<h3 id="org1b744ab">REPRESENTATIONAL COMPOSITION</h3>
+<ul>
+<li>Relationships of elements imitatively derived from without, objective elements with associative contents.</li>
+<li>Example acoustical composition (speech exists side by side with music)</li>
+<li>Ofcourse our context is Visual Effects</li>
+
+</ul>
+</section>
+<section id="slide-org5a61061">
+<h4 id="org5a61061">Modern Day Visual Effects Compositing</h4>
+</section>
+<section id="slide-org5a61061-split">
+<ul class="org-ul">
+<li><a id="org8065e38"></a>CGI Compositing<br />
+<ul class="org-ul">
+<li><a id="org06c79c0"></a>some text<br />
+</section>
+<section id="slide-org06c79c0-split">
+</li>
+</ul>
+</li>
+<li><a id="org1cadfa9"></a>Set Extension<br />
+<ul class="org-ul">
+<li><a id="org19353da"></a>some text<br />
+</section>
+<section id="slide-org19353da-split">
+</li>
+</ul>
+</li>
+<li><a id="orgf4db977"></a>Match Move<br />
+<ul class="org-ul">
+<li><a id="org8265873"></a>some text<br />
+</section>
+<section id="slide-org8265873-split">
+</li>
+</ul>
+</li>
+<li><a id="org0b48581"></a>Chroma Compositing<br />
+<ul class="org-ul">
+<li><a id="org17271fc"></a>some text<br />
+</section>
+<section id="slide-org17271fc-split">
+</li>
+</ul>
+</li>
+<li><a id="org27c15df"></a>Motion Tracking<br />
+<ul class="org-ul">
+<li><a id="org2c0411d"></a>some text<br />
+</section>
+<section id="slide-org2c0411d-split">
+</li>
+</ul>
+</li>
+<li><a id="org96eb12f"></a>Warping and Morphing<br />
+<ul class="org-ul">
+<li><a id="orgea51d8d"></a>some text<br />
+</section>
+<section id="slide-orgea51d8d-split">
+</li>
+</ul>
+</li>
+<li><a id="org20cf128"></a>Bullet Time Shots<br />
+<ul class="org-ul">
+<li><a id="org28209bc"></a>some text<br />
+</section>
+<section id="slide-org28209bc-split">
+</li>
+</ul>
+</li>
+<li><a id="org58a3309"></a>Crowd Duplication<br />
+<ul class="org-ul">
+<li><a id="org122ce0a"></a>some text<br />
+</section>
+<section id="slide-org122ce0a-split">
+</li>
+</ul>
+</li>
+<li><a id="org20d9d49"></a>Atmospherics<br />
+<ul class="org-ul">
+<li><a id="org9ddc3c4"></a>some text<br />
+</section>
+<section id="slide-org9ddc3c4-split">
+</li>
+</ul>
+</li>
+<li><a id="orgaa7a747"></a>Rotoscoping<br />
+<ul class="org-ul">
+<li><a id="org3f121c4"></a>some text<br />
+</section>
+<section id="slide-org3f121c4-split">
+</li>
+</ul>
+</li>
+<li><a id="org9638eb9"></a>Wire Removal<br />
+<ul class="org-ul">
+<li><a id="org2d4a0c6"></a>some text<br />
+</section>
+<section id="slide-org2d4a0c6-split">
+</li>
+</ul>
+</li>
+<li><a id="org8e9b06b"></a>Scene Salvage<br />
+</section>
+<section id="slide-org8e9b06b-split">
+</li>
+</ul>
+</section>
+<section id="slide-orgc2f8ad2">
+<h3 id="orgc2f8ad2">COLOUR COMPOSITION</h3>
+<div class="outline-text-3" id="text-orgc2f8ad2">
+</div>
+</section>
+<section id="slide-org6f9c5ac">
+<h4 id="org6f9c5ac">Compositing Color</h4>
+<ul>
+<li>Color Space</li>
+<li>Black and White Points</li>
+<li>Color Adjustments</li>
+<li>Gamma Slamming</li>
+<li>Pre-Balancing Color Channels</li>
+
+</ul>
+</section>
+<section id="slide-org6f9c5ac-split">
+<ul class="org-ul">
+<li><a id="org2b25dd4"></a>Color Space<br />
+</section>
+<section id="slide-org2b25dd4-split">
+</li>
+<li><a id="org12d712f"></a>Black and White Points<br />
+</section>
+<section id="slide-org12d712f-split">
+</li>
+<li><a id="orgdb9ff45"></a>Color Adjustments<br />
+</section>
+<section id="slide-orgdb9ff45-split">
+</li>
+<li><a id="org608849e"></a>Gamma Slamming<br />
+</section>
+<section id="slide-org608849e-split">
+</li>
+<li><a id="org7ef2a40"></a>Pre-Balancing Color Channels<br /></li>
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-orgdd7c909">
+<h2 id="orgdd7c909">Formats as canvas</h2>
+<div class="outline-text-2" id="text-orgdd7c909">
+</div>
+</section>
+<section id="slide-org0328175">
+<h3 id="org0328175">Structure of Digital Images</h3>
+<div class="outline-text-3" id="text-org0328175">
+</div>
+</section>
+<section id="slide-org8cd5edb">
+<h4 id="org8cd5edb">The Pixel</h4>
+</section>
+<section id="slide-org56e4680">
+<h4 id="org56e4680">Color Images</h4>
+</section>
+<section id="slide-org87527ac">
+<h4 id="org87527ac">Image Channels</h4>
+</section>
+<section id="slide-org2c7b38e">
+<h4 id="org2c7b38e">Dots Per Inch (DPI)</h4>
+</section>
+<section id="slide-org16f6060">
+<h3 id="org16f6060">Digital Image Metadata</h3>
+<div class="outline-text-3" id="text-org16f6060">
+</div>
+</section>
+<section id="slide-org4ae53dd">
+<h4 id="org4ae53dd">Digitizing Images</h4>
+</section>
+<section id="slide-org0b43731">
+<h4 id="org0b43731">Image Resolution</h4>
+</section>
+<section id="slide-org2c062bf">
+<h4 id="org2c062bf">Image Aspect Ratio</h4>
+</section>
+<section id="slide-orga9fd4a9">
+<h4 id="orga9fd4a9">Pixel Aspect Ratio</h4>
+</section>
+<section id="slide-orgfcaaee5">
+<h4 id="orgfcaaee5">Display Aspect Ratio</h4>
+</section>
+<section id="slide-orgeca6838">
+<h4 id="orgeca6838">Bit Depth</h4>
+</section>
+<section id="slide-org9d427f5">
+<h4 id="org9d427f5">Floating-Point</h4>
+</section>
+<section id="slide-org99c41cd">
+<h4 id="org99c41cd">Multiplying Images</h4>
+</section>
+<section id="slide-orgdda373b">
+<h4 id="orgdda373b">Image File Formats</h4>
+</section>
+<section id="slide-org0bc857b">
+<h4 id="org0bc857b">Photographic Images vs. Graphics</h4>
+</section>
+<section id="slide-orgbe297fd">
+<h4 id="orgbe297fd">Indexed Color Images (CLUT)</h4>
+</section>
+<section id="slide-org30e8fc9">
+<h4 id="org30e8fc9">Compression</h4>
+</section>
+<section id="slide-org152728d">
+<h4 id="org152728d">EXR</h4>
+</section>
+<section id="slide-orgb99ae3d">
+<h4 id="orgb99ae3d">File Formats</h4>
+</section>
+</section>
+<section>
+<section id="slide-org033b82e">
+<h2 id="org033b82e">Elements of VFX Compositing</h2>
+<div class="outline-text-2" id="text-org033b82e">
+</div>
+</section>
+<section id="slide-orga5dfd2f">
+<h3 id="orga5dfd2f">CGI Compositing</h3>
+<div class="outline-text-3" id="text-orga5dfd2f">
+</div>
+</section>
+<section id="slide-org72cf438">
+<h4 id="org72cf438">Premultiply</h4>
+</section>
+<section id="slide-orgb619d72">
+<h4 id="orgb619d72">Scaling the Background</h4>
+</section>
+<section id="slide-orga3da387">
+<h4 id="orga3da387">Semi-Transparent Pixels</h4>
+</section>
+<section id="slide-orgf3e77eb">
+<h4 id="orgf3e77eb">Summing the Layers</h4>
+</section>
+<section id="slide-orgce7b50f">
+<h4 id="orgce7b50f">Multipass Compositing</h4>
+</section>
+<section id="slide-orgbc04c99">
+<h4 id="orgbc04c99">Depth Compositing</h4>
+</section>
+<section id="slide-orgba12f2b">
+<h4 id="orgba12f2b">Multiplane Compositing</h4>
+</section>
+<section id="slide-orgf5025fb">
+<h4 id="orgf5025fb">Dynamics and Simulations</h4>
+</section>
+<section id="slide-orgb874bc7">
+<h4 id="orgb874bc7">Particle Effects</h4>
+</section>
+<section id="slide-orgd8c7bd7">
+<h3 id="orgd8c7bd7">Key, Matte, Alpha, and Mask</h3>
+</section>
+<section id="slide-org11bfe46">
+<h3 id="org11bfe46">Chroma Compositing</h3>
+<div class="outline-text-3" id="text-org11bfe46">
+</div>
+</section>
+<section id="slide-org9433743">
+<h4 id="org9433743">Keyers</h4>
+<div class="outline-text-4" id="text-org9433743">
+</div>
+<ul class="org-ul">
+<li><a id="orge219008"></a>Luma-Key<br /></li>
+<li><a id="org4348010"></a>Chroma-key<br /></li>
+<li><a id="org7ec9564"></a>Difference-Key<br /></li>
+</ul>
+</section>
+<section id="slide-orge31b1b9">
+<h4 id="orge31b1b9">How Keyers Work</h4>
+</section>
+<section id="slide-orgc525c22">
+<h4 id="orgc525c22">Pulling the Matte</h4>
+</section>
+<section id="slide-org7fba28a">
+<h4 id="org7fba28a">Despill</h4>
+</section>
+<section id="slide-orga652601">
+<h4 id="orga652601">Color Correction</h4>
+</section>
+<section id="slide-orgcda9696">
+<h4 id="orgcda9696">Scene Adjustment (scaling foreground or background)</h4>
+</section>
+<section id="slide-org97afaa7">
+<h4 id="org97afaa7">Making The Composite</h4>
+</section>
+<section id="slide-org406e115">
+<h4 id="org406e115">Before the keyer processes</h4>
+<div class="outline-text-4" id="text-org406e115">
+</div>
+<ul class="org-ul">
+<li><a id="orga12bd58"></a>Garbage Mattes<br /></li>
+<li><a id="org957fe65"></a>Denoise<br /></li>
+<li><a id="orgf3299e2"></a>Grain Extraction<br /></li>
+</ul>
+</section>
+<section id="slide-org075e0d0">
+<h3 id="org075e0d0">Rotoscoping</h3>
+<div class="outline-text-3" id="text-org075e0d0">
+</div>
+</section>
+<section id="slide-org8afc176">
+<h4 id="org8afc176">Splines</h4>
+</section>
+<section id="slide-org44d63f7">
+<h4 id="org44d63f7">Motion Blur</h4>
+</section>
+<section id="slide-orgfae7d91">
+<h4 id="orgfae7d91">On 2’s</h4>
+</section>
+<section id="slide-orgf0d5102">
+<h3 id="orgf0d5102">Image Blending</h3>
+<div class="outline-text-3" id="text-orgf0d5102">
+</div>
+</section>
+<section id="slide-org8b050a6">
+<h4 id="org8b050a6">Merge</h4>
+<div class="outline-text-4" id="text-org8b050a6">
+</div>
+<ul class="org-ul">
+<li><a id="org7c95606"></a>Screen<br /></li>
+<li><a id="org30bff45"></a>Over<br /></li>
+<li><a id="org69c86d0"></a>Soft light<br /></li>
+<li><a id="orgace9f45"></a>Color Dodge<br /></li>
+<li><a id="org4b341bd"></a>Difference<br /></li>
+<li><a id="orgd4b4271"></a>Plus<br /></li>
+</ul>
+</section>
+<section id="slide-org5417298">
+<h4 id="org5417298">Mix</h4>
+</section>
+<section id="slide-org4f2e4a8">
+<h4 id="org4f2e4a8">Add</h4>
+</section>
+<section id="slide-org58cf25b">
+<h4 id="org58cf25b">Subtract</h4>
+</section>
+<section id="slide-orgc8808ce">
+<h4 id="orgc8808ce">Multiply</h4>
+</section>
+<section id="slide-orga076b4f">
+<h3 id="orga076b4f">Transforms</h3>
+<div class="outline-text-3" id="text-orga076b4f">
+</div>
+</section>
+<section id="slide-org1a8a3e8">
+<h4 id="org1a8a3e8">Transform</h4>
+</section>
+<section id="slide-org9e61e0f">
+<h4 id="org9e61e0f">Pivot Points</h4>
+</section>
+<section id="slide-org5798441">
+<h4 id="org5798441">Corner Pin</h4>
+</section>
+<section id="slide-org390bcb9">
+<h4 id="org390bcb9">Animation</h4>
+<div class="outline-text-4" id="text-org390bcb9">
+</div>
+<ul class="org-ul">
+<li><a id="org1af60b8"></a>Key Frame<br /></li>
+<li><a id="org3dddb3e"></a>Procedural<br /></li>
+<li><a id="org997d423"></a>Expression<br /></li>
+</ul>
+</section>
+<section id="slide-org562decd">
+<h4 id="org562decd">Directional Blur</h4>
+</section>
+<section id="slide-org75f2c32">
+<h4 id="org75f2c32">Motion Blur</h4>
+</section>
+<section id="slide-org6199c34">
+<h4 id="org6199c34">Tracking</h4>
+<div class="outline-text-4" id="text-org6199c34">
+</div>
+<ul class="org-ul">
+<li><a id="org38fb15f"></a>Linear Track<br /></li>
+<li><a id="orgf46f944"></a>Planar Track<br /></li>
+<li><a id="org8b2791a"></a>Motion Tracking<br /></li>
+</ul>
+</section>
+<section id="slide-org66b3103">
+<h4 id="org66b3103">Stabilizing</h4>
+</section>
+<section id="slide-org2805d11">
+<h4 id="org2805d11">Matchmove</h4>
+</section>
+<section id="slide-org8724673">
+<h4 id="org8724673">Warp</h4>
+<div class="outline-text-4" id="text-org8724673">
+</div>
+<ul class="org-ul">
+<li><a id="orga8e4a0a"></a>Mesh Warp<br /></li>
+<li><a id="org964f0f5"></a>Spline Warp<br /></li>
+</ul>
+
+</section>
+<section id="slide-org78c43e4">
+<h3 id="org78c43e4">Scene Salvage</h3>
+<div class="outline-text-3" id="text-org78c43e4">
+</div>
+</section>
+<section id="slide-org4a5eb6e">
+<h4 id="org4a5eb6e">Dust Busting</h4>
+</section>
+<section id="slide-orgf8ed644">
+<h4 id="orgf8ed644">Wire Removal</h4>
+</section>
+<section id="slide-org842dd27">
+<h4 id="org842dd27">Rig Removal</h4>
+</section>
+<section id="slide-orgb45446e">
+<h4 id="orgb45446e">Hair Removal</h4>
+</section>
+<section id="slide-orgb33c40c">
+<h4 id="orgb33c40c">Scratch Removal</h4>
+</section>
+<section id="slide-org5cba2c9">
+<h4 id="org5cba2c9">Light Leaks</h4>
+</section>
+<section id="slide-orgd5ea422">
+<h4 id="orgd5ea422">Deflicker</h4>
+</section>
+<section id="slide-orgbb4660b">
+<h4 id="orgbb4660b">Footage Processing</h4>
+<div class="outline-text-4" id="text-orgbb4660b">
+</div>
+<ul class="org-ul">
+<li><a id="org7a29170"></a>Interlaced Videos<br /></li>
+<li><a id="orgfd292af"></a>Non-Square Pixels<br /></li>
+<li><a id="org76f581e"></a>Frame Rate<br /></li>
+<li><a id="org5199287"></a>Coping with Time Code<br /></li>
+<li><a id="org31783b5"></a>Compression Artifacts<br /></li>
+<li><a id="orgec73c40"></a>3:2 Pull-Down<br /></li>
+<li><a id="org7bc2992"></a>3:2 Pull-Up<br /></li>
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org5d498a2">
+<h2 id="org5d498a2">Compositing Software</h2>
+<div class="outline-text-2" id="text-org5d498a2">
+</div>
+</section>
+<section id="slide-org77e4589">
+<h3 id="org77e4589">Node Based</h3>
+</section>
+<section id="slide-org82f796a">
+<h3 id="org82f796a">Layer Based</h3>
+</section>
+</section>
+<section>
+<section id="slide-org4ead854">
+<h2 id="org4ead854">Thank You</h2>
+<p>
+Notes Link:
+Contact:    9967369456
+email:      avik.c@whistlingwoods.net
+</p>
+</section>
+</section>
+</div>
+</div>
+<p> Created by aviik. </p>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+width:1200, height:800, margin: 0.1, minScale:0.2, maxScale:2.5, transition:'concave',
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+});
+</script>
+</body>
+</html>

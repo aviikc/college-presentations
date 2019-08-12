@@ -1,0 +1,150 @@
+#    -*- mode: org -*-
+#+TITLE:         VFX TECHNIQUES II
+#+AUTHOR:        Dynamics and Simulation
+#+EMAIL:         avik.c@whistlingwoods.net
+
+#+REVEAL_INIT_OPTIONS: width:1200, height:800, margin: 0.1, minScale:0.2, maxScale:2.5, transition:'concave'
+#+OPTIONS: toc:nil num:nil
+#+REVEAL_THEME: beige
+#+REVEAL_HEAD_PREAMBLE: <meta name="description" content="Org-Reveal Introduction.">
+#+REVEAL_POSTAMBLE: <p> Created by aviik. </p>
+#+REVEAL_EXTRA_CSS: ./css/presentation.css
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
+* The Physics
+** Newton's Laws of motion
+1. An object in motion stays in motion stays in motion and an object in rest stays in rest.
+2. F=ma
+3. For every action there is an equal and opposite reation.
+* Dynamics And Simulation
+** 
+#+REVEAL_HTML:    <iframe src="http://www.youtube.com/embed/8j42lB9wrdE"   width="720" height="540" frameborder="0" allowfullscreen></iframe>
+** Dynamics
+Dynamics is the branch of classical mechanics concerned with the study of forces and their effects on motion.
+** Types of Dynamics
+- Rigid-body Dynamics(p2-js)
+- Soft-Body/ Flexible Body Dynamics(Matter-Js, Physics-js)
+- Fluid Dynamics
+- Multibody Dynamics
+- Analytical Dynamics
+** Simulation
+A simulation is an approximate imitation of the operation of a process or system.
+#+ATTR_HTML: :height 50%, :width 50% 
+[[./images/dynamics.jpg]]
+** CGI Simulation
+- A CG simulation software provides an approximate physical simulation 
+- dynamic elements, such as rigid body dynamics (including collision detection), soft body dynamics, and fluid dynamics
+- of use in the domains of computer graphics, video games and film. 
+** Physics Libraries
+- Bullet Physics
+- Havok
+- PhysX
+- Box2D
+- Dynamic Animation and Robotics Toolkit (DART)
+- Open Dynamics Engine (ODE)
+- Newton Dynamics
+** Simulation Software
+- Autodesk Maya
+- Unreal Engine
+- Unity
+- Cinema 4D
+- SideFx Houdini
+** Use in CGI
+- objects or particles interact with each other 
+-  affected by forces such as wind or gravity
+-  traditional animation methods quickly reach their limits
+- Animating these elements individually would be a gargantuan task
+- This is where simulation is the weapon of choice
+** Speed Vs Accuracy
+#+ATTR_HTML: :width 100%
+| Real-time:                                                                     | High-Precision:                                       |
+|--------------------------------------------------------------------------------+-------------------------------------------------------|
+| - Uses simplified calculations and decreased accuracy to compute in real-time. | - Calculates Precise Physics for incereased accuracy. |
+|                                                                                |                                                       |
+
+* History of Dynamics and Simulation for Films
+** Early use of Physics in CG
+- One of the earliest examples of dynamic, multidimensional physics calculations being made in a video game is, of course, Atari's Pong
+
+#+ATTR_HTML: :height 50%, :width 50% 
+[[./images/pong.png]]
+
+** Early Morphing
+- Year: 1967
+#+REVEAL_HTML:    <iframe src="http://www.youtube.com/embed/j-oX4duiFNs"   width="720" height="540" frameborder="0" allowfullscreen></iframe>
+** First Physics simulation
+- Year:              1968
+- Significance: Physics of a moving cat. Printed the frames on paper then converted to film.  
+#+REVEAL_HTML:    <iframe src="http://www.youtube.com/embed/so_HQKv-Bmk"   width="720" height="540" frameborder="0" allowfullscreen></iframe>
+** First Key Frame Animation Software
+- Year:              1971
+- Significance:      First Key Frame Animation Software   
+#+REVEAL_HTML:    <iframe src="http://www.youtube.com/embed/vkxrVpzPK4U"   width="720" height="540" frameborder="0" allowfullscreen></iframe>
+** First 2D computer images
+- Year:              1973
+- Film:               Westworld
+- Significance: Cinema's first 2D computer images  
+#+REVEAL_HTML:    <iframe src="http://www.youtube.com/embed/fEHniGifKyE"   width="720" height="540" frameborder="0" allowfullscreen></iframe>
+** First 3D computer graphics
+- Year:              1976
+- Film:               Futureworld
+- Significance: First 3D computer graphics  
+#+REVEAL_HTML:    <iframe src="http://www.youtube.com/embed/QfRAfsK5cvU"   width="720" height="540" frameborder="0" allowfullscreen></iframe>
+** First Digital Matte Painting
+- Year:              1990
+- Film:              Die Hard 2
+- Significance:      First Digital matte Painting by ILM  
+#+ATTR_HTML: :height 50%, :width 50% 
+[[./images/die_hard2.jpg]]
+** First 3D computer graphics
+- Year:              1976
+- Film:               Futureworld
+- Significance: First 3D computer graphics  
+#+REVEAL_HTML:    <iframe src="http://www.youtube.com/embed/fEHniGifKyE"   width="720" height="540" frameborder="0" allowfullscreen></iframe>
+** First 2D computer images
+- Year:              1973
+- Film:               Westworld
+- Significance: Cinema's first 2D computer images  
+#+REVEAL_HTML:    <iframe src="http://www.youtube.com/embed/fEHniGifKyE"   width="720" height="540" frameborder="0" allowfullscreen></iframe>
+* Development of Dynamics algorithms
+** Early Rigid Body collision
+A pivotal paper was written by David Barraff describing a general purpose rigid body collision and contact simulator.
+*** Rube Goldberg Machine - 1989
+#+ATTR_HTML: :height 100%, :width 100% 
+[[./images/snowflakes.gif]]
+*** Falling dice - 1990
+#+ATTR_HTML: :height 100%, :width 100% 
+[[./images/die.gif]]
+*** Lagrange-multiplier tree and snowflakes - 1996
+#+ATTR_HTML: :height 100%, :width 100% 
+[[./images/p101.gif]]
+*** Lagrange-multiplier tree and snowflakes - 1996
+#+ATTR_HTML: :height 100%, :width 100% 
+[[./images/p101.gif]]
+* Role of Simulation Hardware
+As 3D graphics became prevalent in during the 1990s, rendering them in real time began to put a heavy burden on computer processing hardware.
+This gradually lead to the introduction of dedicated Graphics Processing Units (GPUs) to supplement computers' over-taxed CPUs and take over graphics rendering tasks. 
+* Types of cgi Dynamics
+* Rigid-body Dynamics
+** Definition
+In physics, a rigid body  is a solid body in which deformation is zero or so small it can be neglected.
+
+- The distance between any two given points on a rigid body remains constant in time regardless of external forces exerted on it.
+- A rigid body is usually considered as a continuous distribution of mass. 
+* Particle Dynamics
+* Softbody Dynamics
+* Cloth Simulation
+* FEM
+** Mindblowing Make-up
+*** Single Colored Background
+   :PROPERTIES:
+   :reveal_background: #123456
+   :END:
+** Eye-popping CGI
+** Epic Stunts
+** Explosive Scenes
+** Youtube Test
+#+REVEAL_HTML:    <iframe src="http://www.youtube.com/embed/fEHniGifKyE"   width="800" height="600" frameborder="0" allowfullscreen></iframe>
+* Thank You
+- Notes Link:
+- Contact:    9967369456
+- email:      avik.c@whistlingwoods.net
