@@ -146,5 +146,3 @@ In physics, a rigid body  is a solid body in which deformation is zero or so sma
 #+REVEAL_HTML:    <iframe src="http://www.youtube.com/embed/fEHniGifKyE"   width="800" height="600" frameborder="0" allowfullscreen></iframe>
 * Thank You
 - Notes Link:
-- Contact:    9967369456
-- email:      avik.c@whistlingwoods.net

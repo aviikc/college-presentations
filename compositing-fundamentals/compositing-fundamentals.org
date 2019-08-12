@@ -1,15 +1,18 @@
 #    -*- mode: org -*-
 #+TITLE:         Understanding-VFX
-#+AUTHOR:        Fundamentals of Compositing
+#+AUTHOR:        Aviik 
+#+SUBTITLE:      Fundamentals of Compositing
 #+EMAIL:         avik.c@whistlingwoods.net
+#+DATE:          11.10.2016
 
 #+REVEAL_INIT_OPTIONS: width:1200, height:800, margin: 0.1, minScale:0.2, maxScale:2.5, transition:'concave'
-#+OPTIONS: toc:nil num:nil
+#+OPTIONS: toc:nil num:nil created:nil
 #+REVEAL_THEME: beige
 #+REVEAL_HEAD_PREAMBLE: <meta name="description" content="Org-Reveal Introduction.">
 #+REVEAL_POSTAMBLE: <p> Created by aviik. </p>
 #+REVEAL_EXTRA_CSS: ./css/presentation.css
 #+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
+#+OPTIONS: reveal_title_slide:"<h1>%t</h1><h3>%s</h3>"
 * Compositing
 ** REPRESENTATIONAL COMPOSITION 
 - Relationships of elements imitatively derived from without, objective elements with associative contents.
@@ -18,7 +21,7 @@
 *** Modern Day Visual Effects Compositing
 #+REVEAL: split
 **** CGI Compositing
-***** some text
+#+REVEAL_HTML:    <section> <video class="stretch" id="vid" onClick="playPause('vid');" width=38.3% height=38.3% autoplay src="./videos/NatronSpaceship.mp4/"></video></section>
 #+REVEAL: split
 **** Set Extension
 ***** some text
@@ -174,5 +177,4 @@
 ** Layer Based
 * Thank You
 - Notes Link:
-- Contact:    9967369456
-- email:      avik.c@whistlingwoods.net
+
