@@ -1,6 +1,7 @@
 #    -*- mode: org -*-
 #+TITLE:         VFX TECHNIQUES II
-#+AUTHOR:        Dynamics and Simulation
+#+SUBTITLE:      Dynamics and Simulation
+#+AUTHOR:        Aviik C
 #+EMAIL:         avik.c@whistlingwoods.net
 
 #+REVEAL_INIT_OPTIONS: width:1200, height:800, margin: 0.1, minScale:0.2, maxScale:2.5, transition:'concave'
@@ -10,6 +11,7 @@
 #+REVEAL_POSTAMBLE: <p> Created by aviik. </p>
 #+REVEAL_EXTRA_CSS: ./css/presentation.css
 #+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
+#+OPTIONS: reveal_title_slide:"<h1>%t</h1><h3>%s</h3>"
 * The Physics
 ** Newton's Laws of motion
 1. An object in motion stays in motion stays in motion and an object in rest stays in rest.
@@ -95,16 +97,9 @@ A simulation is an approximate imitation of the operation of a process or system
 - Significance:      First Digital matte Painting by ILM  
 #+ATTR_HTML: :height 50%, :width 50% 
 [[./images/die_hard2.jpg]]
-** First 3D computer graphics
-- Year:              1976
-- Film:               Futureworld
-- Significance: First 3D computer graphics  
-#+REVEAL_HTML:    <iframe src="http://www.youtube.com/embed/fEHniGifKyE"   width="720" height="540" frameborder="0" allowfullscreen></iframe>
-** First 2D computer images
-- Year:              1973
-- Film:               Westworld
-- Significance: Cinema's first 2D computer images  
-#+REVEAL_HTML:    <iframe src="http://www.youtube.com/embed/fEHniGifKyE"   width="720" height="540" frameborder="0" allowfullscreen></iframe>
+** Other Historical Importance
+*** - The science fiction boom
+*** -Introduction of computer generated imagery
 * Development of Dynamics algorithms
 ** Early Rigid Body collision
 A pivotal paper was written by David Barraff describing a general purpose rigid body collision and contact simulator.
@@ -117,9 +112,7 @@ A pivotal paper was written by David Barraff describing a general purpose rigid 
 *** Lagrange-multiplier tree and snowflakes - 1996
 #+ATTR_HTML: :height 100%, :width 100% 
 [[./images/p101.gif]]
-*** Lagrange-multiplier tree and snowflakes - 1996
-#+ATTR_HTML: :height 100%, :width 100% 
-[[./images/p101.gif]]
+
 * Role of Simulation Hardware
 As 3D graphics became prevalent in during the 1990s, rendering them in real time began to put a heavy burden on computer processing hardware.
 This gradually lead to the introduction of dedicated Graphics Processing Units (GPUs) to supplement computers' over-taxed CPUs and take over graphics rendering tasks. 
@@ -130,19 +123,31 @@ In physics, a rigid body  is a solid body in which deformation is zero or so sma
 
 - The distance between any two given points on a rigid body remains constant in time regardless of external forces exerted on it.
 - A rigid body is usually considered as a continuous distribution of mass. 
-* Particle Dynamics
+#+ATTR_HTML: :height 200%, :width 200% 
+[[./images/rbd.jpg]]
 * Softbody Dynamics
-* Cloth Simulation
+- Cloth Simulation
+- Particle Dynamics
+- Wire Dynamics
+- Sand Simulation
+** Cloth Simulation
+#+ATTR_HTML: :height 100%, :width 100% 
+[[./images/soft-body.jpg]]
 * FEM
+-The finite element method (FEM) is a numerical method for solving problems of engineering and mathematical physics
+-  finite element solids represent an object as a solid mass of small 3D tetrahedrons
+- This lets the solver realistically simulate bending, elasticity, internal mass, chipping, crumbling, and shattering
+* Special Effects in Modern Film
 ** Mindblowing Make-up
 *** Single Colored Background
    :PROPERTIES:
    :reveal_background: #123456
    :END:
+
 ** Eye-popping CGI
 ** Epic Stunts
 ** Explosive Scenes
-** Youtube Test
+
 #+REVEAL_HTML:    <iframe src="http://www.youtube.com/embed/fEHniGifKyE"   width="800" height="600" frameborder="0" allowfullscreen></iframe>
 * Thank You
 - Notes Link:
