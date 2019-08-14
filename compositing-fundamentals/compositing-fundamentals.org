@@ -19,41 +19,74 @@
 - Example acoustical composition (speech exists side by side with music)
 - Ofcourse our context is Visual Effects
 *** Modern Day Visual Effects Compositing
+- CGICompositing
+- SetExtension
+- MatchMove
+- ChromaCompositing
+- MotionTracking
+- WarpingandMorphing
+- BulletTimeShots
+- CrowdDuplication
+- Atmospherics
+- Rotoscoping
+- WireRemoval
+- SceneSalvage
+
 #+REVEAL: split
 **** CGI Compositing
 #+REVEAL_HTML:    <section> <video class="stretch" id="vid" onClick="playPause('vid');" width=38.3% height=38.3% autoplay src="./videos/NatronSpaceship.mp4/"></video></section>
+
 #+REVEAL: split
 **** Set Extension
-***** some text
+#+REVEAL_HTML:    <section> <img src = "./images/setextend.jpg" width="500" height="600" ></section>
+
 #+REVEAL: split
 **** Match Move
-***** some text
+Its the process of insertion of computer graphics into live-action footage.
+- position, scale, orientation, and motion
+- relative to the photographed objects
+
 #+REVEAL: split
 **** Chroma Compositing
-***** some text
+- First used in 1933
+- The Thief of Bagdad in 1940 first used to process a travelling matte
+- Many film scenes choose their green or blue screens acoording to particular needs of the scene
+#+REVEAL_HTML:<img src = "./images/greenscr.jpg" width="38.3%" height="38.3%">
+
 #+REVEAL: split
 **** Motion Tracking
-***** some text
+- Motion Tracking has many uses
+- Combining elements filmed seperately(eg adding video to the side of a moving bus)
+- Animating a still image to match motion of action footage.
+- Animating effects to follow a moving Elements
+- Stabilizing Footage
 #+REVEAL: split
 **** Warping and Morphing
-***** some text
+- Its like attaching an image to a sheet of rubber, then pulling and stretching only those parts of the rubber sheet that you want to deform
+- Morphs are the big brother to warps. It takes two warps and a dissolve to create a morph
+#+REVEAL_HTML: <span><img src = "./images/warping.PNG" width="50%" height="200"></span><span><img src = "./images/morph.PNG" width="50%" height="200"></span>
 #+REVEAL: split
 **** Bullet Time Shots
-***** some text
+Ever since we were thrilled by the jaw-hanging spectacle of a camera ﬂying around a suspended animation of 
+Keanu Reeves in The Matrix, bullet time shots have become a permanent entry in the lexicon of visual effects
+#+REVEAL_HTML:   <img src = "./images/bullet_time.PNG" width="33.3%" height="300">
+
 #+REVEAL: split
 **** Crowd Duplication
-***** some text
+#+REVEAL_HTML:   <a href="https://youtu.be/xwc8qI3yiDk">Youtube Link</a>
 #+REVEAL: split
 **** Atmospherics
-***** some text
+#+REVEAL_HTML:   <img src = "./images/atmospherics.PNG" width="100%" height="300">
 #+REVEAL: split
 **** Rotoscoping
-***** some text
+- Technique that animators use to trace over motion picture footage, frame by frame, to produce realistic action
+#+REVEAL_HTML:   <img src = "./images/rotoscoping.jpg" width="50%" height="300">
 #+REVEAL: split
 **** Wire Removal
-***** some text
+#+REVEAL_HTML:   <img src = "./images/wireR.PNG" width="55%" height="300">
 #+REVEAL: split
 **** Scene Salvage
+#+REVEAL_HTML:   <img src = "./images/sceneSal.PNG" width="100%" height="300">
 #+REVEAL: split
 ** COLOUR COMPOSITION 
 *** Compositing Color

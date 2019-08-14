@@ -1,0 +1,18 @@
+﻿- CGICompositing
+- SetExtension
+- MatchMove
+- ChromaCompositing
+- MotionTracking
+- WarpingandMorphing
+- BulletTimeShots
+- CrowdDuplication
+- Atmospherics
+- Rotoscoping
+- WireRemoval
+- SceneSalvage
+The Thief of Bagdad  in 1940
+
+attaching an image to a sheet of rubber, then pulling and stretching only those parts of the rubber sheet that you want to deform
+Morphs are the big brother to warps. It takes two warps and a dissolve to create a morph
+
+Ever since we were thrilled by the jaw-hanging spectacle of a camera ﬂ ying around a suspended animation of Keanu Reeves in The Matrix, bullet time shots have become a permanent entry in the lexicon of visual effects
