@@ -1,0 +1,134 @@
+#    -*- mode: org -*-
+#+TITLE:         Compositing Chroma\footnote{My footnote.}
+#+AUTHOR:        Aviik
+#+SUBTITLE:      Chroma keying in Nuke
+#+EMAIL:         avik.c@whistlingwoods.net
+#+DATE:          08.18.2019
+
+#+REVEAL_INIT_OPTIONS: width:1200, height:800, margin: 0.1, minScale:0.2, maxScale:2.5
+#+OPTIONS: toc:nil num:nil created:nil
+#+REVEAL_THEME: moon
+#+REVEAL_HEAD_PREAMBLE: <meta name="description" content="Org-Reveal Introduction.">
+#+REVEAL_POSTAMBLE: <p> Created by aviik. </p>
+#+REVEAL_EXTRA_CSS: ./css/presentation.css
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
+#+OPTIONS: reveal_title_slide:"<h1>%t</h1><h3>%s</h3><h6>%e</h6>"
+* Keying is a compositing technique, but it’s not the only one.
+#+REVEAL: split
+A huge error that many filmmakers make is thinking that
+it is cheaper and easier to fix all production problems in post.
+- Bad Chroma takes time to fix which costs money
+- Quality of output drops
+* Example
+[[https://youtu.be/qWQGkNjbWGY][Short Film 1 - Keep off the Grass]]
+
+* Keying
+** Overview
+#+begin_src ditaa :file ./images/ditbox.png
+
++----------------+         +-----------------+
+|  Source Plate  | Keyer   |                 |
+|  to key out    |-------->| Clean Alpha     |
+|  subject.      |         |                 |
++----------------+         +-----------------+
+        |                          |
+        |despill                   |Transfer Alpha
+        v                          v
++----------------+         +-----------------+
+|  Source Plate  | Grade   | Keyed out       |
+|  with neutral  |-------->| clean plate     |
+|  color.        |         | to composite    |
++----------------+         +-----------------+
+                                   |
+                                   |
+                        Merge / Add-mix / Key-Mix
+                                   |
+                              Match Grade
+                                   |
+                                   V
++----------------+         +-----------------+
+| Processed      |         | Composite with  |
+| background     |-------->| background.     |
+| plate          |         |                 |
++----------------+         +-----------------+
+
+
+#+end_src
+
+#+RESULTS:
+[[file:./images/ditbox.png]]
+
+** Source Plate
+- Color Space
+- Denoise
+- Screen Fixes to even out the background
+*** Color Space
+[[file:./images/c_space.png]]
+*** Denoise
+Degrain tools are used when an image is compromised by film grain.
+#+REVEAL_HTML:    <section> <video class="stretch" id="vid" onClick="playPause('vid');" width=25% height=200px autoplay src="./videos/ex_noise.mp4/"></video></section>
+*** Screen Fixes
+[[file:./images/scrn_fixes.png]]
+** Keyer
+- Luminance Keyer
+- Hue Keyer
+- Chroma Keyer
+  - Blue Screen
+  - Green Screen
+  - Magenta Screen
+** Alpha
+- Roto
+- Core Matte
+- Garbage Matte
+- Black and White Matte
+
+** Spill Supress
+- Types
+  - Core Spill
+  - Edge Spill
+- Despill Tools
+  - Primatte
+  - Hue Correct
+  - Gizmos
+    - De-spill Madness
+** Color Correcting
+#+begin_src ditaa :file ./images/cc-flow.png
++----------------+         +-----------------+         +-----------------+
+|                |         | Color Correct   |         |                 |
+| Grade          |-------->| midtones        |-------->| Grade           |
+| whitepoint     |         |                 |         | blackpoint      |
++----------------+         +-----------------+         +-----------------+
+#+end_src
+
+#+RESULTS:
+[[file:./images/cc-flow.png]]
+** Transfer Alpha
+*** Premult 
+- A premultiplied image is simply an image where the alpha (a) channel has been multiplied by the colour (RGB)
+[[file:./images/preMult01.jpg]]
+
+- [[https://vimeo.com/85519909][Premult Youtube Link]]
+- [[https://www.schoolofmotion.com/blog/premultiplication/][More Links]]
+*** Unpremult
+- Unpremult divides the input’s rgb channels by its alpha
+file:./images/unpreMult01.jpg
+*** Copy Node
+*** Shuffle
+*** Shuffle Copy
+
+** Final Plate Export
+*** Add-Mix
+*** Merge
+*** Merge Expressions
+*** Key-Mix
+
+* Primatte
+* Keylight
+* Ultimatte
+* Mattes
+* Splitting Mattes
+* Despill
+* Recolor
+* Clips
+https://www.youtube.com/watch?v=RtILuFhe6v4
+https://youtu.be/TxyMY-hmJfs

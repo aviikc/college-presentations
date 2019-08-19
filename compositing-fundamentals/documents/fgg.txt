@@ -1,0 +1,19 @@
+Even lighting
+it is best to have as narrow a color range
+The biggest challenge when setting up a bluescreen or greenscreen is even lighting and the avoidance of shadow.
+A shadow would present itself as a darker color to the camera and might not register for replacement.
+Materials which are shiny will be far less successful than those that are not.
+
+
+
+
+
+
+Exposure
+
+challenge for bluescreen or greenscreen is proper camera exposure
+Onder exposing or over exposing a colored backdrop can lead to poor saturation levels
+under exposed images can contain high amounts of noise
+In order to get the cleanest key from shooting greenscreen it is necessary to create a value diference between the subject and the greenscreen.
+a two-stop diference can be used
+Either by making the greenscreen two stops higher than the subject, or vice versa.

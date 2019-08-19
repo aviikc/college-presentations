@@ -1,0 +1,13 @@
+.reveal table th, .reveal table td {
+    text-align: center;
+    border: 1px solid white;
+}
+
+.reveal section img { background:none; border:none; box-shadow:none; }
+
+.reveal .stretch {
+    height: 200px;
+    width: 50%;
+}
+
+

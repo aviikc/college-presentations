@@ -108,9 +108,26 @@ Keanu Reeves in The Matrix, bullet time shots have become a permanent entry in t
 * Formats as canvas
 ** Structure of Digital Images
 *** The Pixel
+#+REVEAL: split
+- The smallest element of an image that can be individually processed
+#+REVEAL_HTML: <img src = "./images/pixel.PNG" width="100%" height="200">
 *** Color Images
+- Monochrome Image
+  - Black and white images
+  - One channel images
+  - Monochrome (one color) images
+#+REVEAL_HTML: <img src = "./images/greyImg.PNG" width="100%" height="200">
+- Multi-Color Image  
+#+REVEAL_HTML: <img src = "./images/colorImg.PNG" width="100%" height="200">
+
 *** Image Channels
+#+REVEAL: split
+#+REVEAL_HTML: <img src = "./images/channels.PNG" width="70%" height="200">
+#+REVEAL: split
+#+REVEAL_HTML: <img src = "./images/chn2.PNG" width="70%" height="200">
 *** Dots Per Inch (DPI)
+#+REVEAL: split
+#+REVEAL_HTML: <img src = "./images/chn2.PNG" width="70%" height="200">
 ** Digital Image Metadata
 *** Digitizing Images
 *** Image Resolution

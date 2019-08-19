@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Compositing Chroma\footnote{My footnote.}</title>
+<meta name="author" content="(Aviik)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/css/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/css/theme/moon.css" id="theme"/>
+
+<link rel="stylesheet" href="./css/presentation.css"/>
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<meta name="description" content="Org-Reveal Introduction.">
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h1>Compositing Chroma\footnote{My footnote.}</h1><h3>Chroma keying in Nuke</h3><h6><a href="mailto:avik.c@whistlingwoods.net">avik.c@whistlingwoods.net</a></h6>
+</section>
+<section>
+<section id="slide-orgda3f235">
+<h2 id="orgda3f235">Keying is a compositing technique, but it’s not the only one.</h2>
+</section>
+<section id="slide-orgda3f235-split">
+<p>
+A huge error that many filmmakers make is thinking that
+it is cheaper and easier to fix all production problems in post.
+</p>
+<ul>
+<li>Bad Chroma takes time to fix which costs money</li>
+<li>Quality of output drops</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-orgf438e9d">
+<h2 id="orgf438e9d">Example</h2>
+<p>
+<a href="https://youtu.be/qWQGkNjbWGY">Short Film 1 - Keep off the Grass</a>
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org8d7502b">
+<h2 id="org8d7502b">Keying</h2>
+<div class="outline-text-2" id="text-org8d7502b">
+</div>
+</section>
+<section id="slide-org76b35fc">
+<h3 id="org76b35fc">Overview</h3>
+
+<div class="figure">
+<p><img src="./images/ditbox.png" alt="ditbox.png" />
+</p>
+</div>
+
+</section>
+<section id="slide-org68d0cb7">
+<h3 id="org68d0cb7">Source Plate</h3>
+<ul>
+<li>Color Space</li>
+<li>Denoise</li>
+<li>Screen Fixes to even out the background</li>
+
+</ul>
+</section>
+<section id="slide-org175b51d">
+<h4 id="org175b51d">Color Space</h4>
+
+<div class="figure">
+<p><img src="./images/c_space.png" alt="c_space.png" />
+</p>
+</div>
+</section>
+<section id="slide-org3ddd5ed">
+<h4 id="org3ddd5ed">Denoise</h4>
+<p>
+Degrain tools are used when an image is compromised by film grain.
+</p>
+<section> <video class="stretch" id="vid" onClick="playPause('vid');" width=25% height=200px autoplay src="./videos/ex_noise.mp4/"></video></section>
+</section>
+<section id="slide-org136c5f1">
+<h4 id="org136c5f1">Screen Fixes</h4>
+
+<div class="figure">
+<p><img src="./images/scrn_fixes.png" alt="scrn_fixes.png" />
+</p>
+</div>
+</section>
+<section id="slide-orge845325">
+<h3 id="orge845325">Keyer</h3>
+<ul>
+<li>Luminance Keyer</li>
+<li>Hue Keyer</li>
+<li>Chroma Keyer
+<ul>
+<li>Blue Screen</li>
+<li>Green Screen</li>
+<li>Magenta Screen</li>
+
+</ul></li>
+
+</ul>
+</section>
+<section id="slide-org313c63c">
+<h3 id="org313c63c">Alpha</h3>
+<ul>
+<li>Roto</li>
+<li>Core Matte</li>
+<li>Garbage Matte</li>
+<li>Black and White Matte</li>
+
+</ul>
+
+</section>
+<section id="slide-orge990ad0">
+<h3 id="orge990ad0">Spill Supress</h3>
+<ul>
+<li>Types
+<ul>
+<li>Core Spill</li>
+<li>Edge Spill</li>
+
+</ul></li>
+<li>Despill Tools
+<ul>
+<li>Primatte</li>
+<li>Hue Correct</li>
+<li>Gizmos
+<ul>
+<li>De-spill Madness</li>
+
+</ul></li>
+
+</ul></li>
+
+</ul>
+</section>
+<section id="slide-org60de515">
+<h3 id="org60de515">Color Correcting</h3>
+
+<div class="figure">
+<p><img src="./images/cc-flow.png" alt="cc-flow.png" />
+</p>
+</div>
+</section>
+<section id="slide-orge4f136a">
+<h3 id="orge4f136a">Transfer Alpha</h3>
+<div class="outline-text-3" id="text-orge4f136a">
+</div>
+</section>
+<section id="slide-orga07a48d">
+<h4 id="orga07a48d">Premult</h4>
+<ul>
+<li>A premultiplied image is simply an image where the alpha (a) channel has been multiplied by the colour (RGB)</li>
+
+</ul>
+
+<div class="figure">
+<p><img src="./images/preMult01.jpg" alt="preMult01.jpg" />
+</p>
+</div>
+
+<ul>
+<li><a href="https://vimeo.com/85519909">Premult Youtube Link</a></li>
+<li><a href="https://www.schoolofmotion.com/blog/premultiplication/">More Links</a></li>
+
+</ul>
+</section>
+<section id="slide-org8e02505">
+<h4 id="org8e02505">Unpremult</h4>
+<ul>
+<li>Unpremult divides the input’s rgb channels by its alpha</li>
+
+</ul>
+
+<div class="figure">
+<p><img src="./images/unpreMult01.jpg" alt="unpreMult01.jpg" />
+</p>
+</div>
+</section>
+<section id="slide-org07a36f7">
+<h4 id="org07a36f7">Copy Node</h4>
+</section>
+<section id="slide-org385eacb">
+<h4 id="org385eacb">Shuffle</h4>
+</section>
+<section id="slide-org58e907f">
+<h4 id="org58e907f">Shuffle Copy</h4>
+
+</section>
+<section id="slide-org771ec74">
+<h3 id="org771ec74">Final Plate Export</h3>
+<div class="outline-text-3" id="text-org771ec74">
+</div>
+</section>
+<section id="slide-orgd083a6a">
+<h4 id="orgd083a6a">Add-Mix</h4>
+</section>
+<section id="slide-orgadf9f73">
+<h4 id="orgadf9f73">Merge</h4>
+</section>
+<section id="slide-org224f55d">
+<h4 id="org224f55d">Merge Expressions</h4>
+</section>
+<section id="slide-org8080d5d">
+<h4 id="org8080d5d">Key-Mix</h4>
+
+</section>
+</section>
+<section>
+<section id="slide-orgfe6aece">
+<h2 id="orgfe6aece">Primatte</h2>
+</section>
+</section>
+<section>
+<section id="slide-org9eb44bc">
+<h2 id="org9eb44bc">Keylight</h2>
+</section>
+</section>
+<section>
+<section id="slide-org1386704">
+<h2 id="org1386704">Ultimatte</h2>
+</section>
+</section>
+<section>
+<section id="slide-org392d5df">
+<h2 id="org392d5df">Mattes</h2>
+</section>
+</section>
+<section>
+<section id="slide-org19e9107">
+<h2 id="org19e9107">Splitting Mattes</h2>
+</section>
+</section>
+<section>
+<section id="slide-org07a05a3">
+<h2 id="org07a05a3">Despill</h2>
+</section>
+</section>
+<section>
+<section id="slide-orgdcea705">
+<h2 id="orgdcea705">Recolor</h2>
+</section>
+</section>
+<section>
+<section id="slide-orgd84d814">
+<h2 id="orgd84d814">Clips</h2>
+<p>
+<a href="https://www.youtube.com/watch?v=RtILuFhe6v4">https://www.youtube.com/watch?v=RtILuFhe6v4</a>
+<a href="https://youtu.be/TxyMY-hmJfs">https://youtu.be/TxyMY-hmJfs</a>
+</p>
+</section>
+</section>
+</div>
+</div>
+<p> Created by aviik. </p>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+width:1200, height:800, margin: 0.1, minScale:0.2, maxScale:2.5,
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+});
+</script>
+</body>
+</html>
