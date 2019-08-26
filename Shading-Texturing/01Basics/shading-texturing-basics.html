@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Shading and Texturing</title>
+<meta name="author" content="(Aviik)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/css/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/css/theme/moon.css" id="theme"/>
+
+<link rel="stylesheet" href="./css/presentation.css"/>
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<meta name="description" content="Org-Reveal Introduction.">
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h1>Shading and Texturing</h1><h3>Using Substance Painter</h3><h6><a href="mailto:avik.c@whistlingwoods.net">avik.c@whistlingwoods.net</a></h6>
+</section>
+
+
+<section>
+<section id="slide-orgf4c1324">
+<h2 id="orgf4c1324">Why do we texture?</h2>
+<p>
+The first and foremost aim of texture use is to show the material from which the real object is made.
+To be more accurate to textute is to show definite physical light properties of the modeled object.
+</p>
+
+</section>
+<section id="slide-orgf4c1324-split">
+<p>
+Texuring along with lighting calculations needed to construct a realistic and functional 3D scene via a render engine.
+</p>
+
+</section>
+<section id="slide-orgf4c1324-split">
+<p>
+Render Engines
+</p>
+<ul>
+<li>Redshift</li>
+<li>Mental Ray</li>
+<li>Render Man</li>
+
+</ul>
+
+</section>
+<section id="slide-orgf4c1324-split">
+<p>
+Types
+</p>
+<ul>
+<li>CPU Rendering vs GPU Rendering</li>
+<li>Biased(physically accurate) Vs Unbiased Rendering Vs Hybrid</li>
+
+</ul>
+
+</section>
+<section id="slide-orgf4c1324-split">
+<p>
+What does a given Render engine take as input?
+</p>
+<ul>
+<li>It needs geometry.</li>
+<li>It needs a material bound to that geometry to describe how to render that geometry. How that geometry responds to light. What colour to shade the geometry with.</li>
+<li>It needs lights in the scene.</li>
+<li>It needs a camera. Everything is relative to the camera. All your geometry is transformed in to the space of the camera. Camera rules everything.</li>
+
+</ul>
+
+</section>
+<section id="slide-orgf4c1324-split">
+<p>
+EXAMPLE OF BIASED RENDER ENGINE:
+</p>
+<ul>
+<li>V-Ray</li>
+<li>Redshift</li>
+<li>Mental Ray</li>
+<li>Render Man</li>
+<li>Micropolygon</li>
+
+</ul>
+</section>
+<section id="slide-orgf4c1324-split">
+<p>
+Unbiased rendering methods include:
+Path Tracing
+Light tracing
+Bidirectional path tracing
+Metropolis light transport (and derived Energy Redistribution Path Tracing
+</p>
+</section>
+<section id="slide-orgf4c1324-split">
+<p>
+EXAMPLE OF UNBIASED RENDER ENGINE:
+</p>
+<ul>
+<li>Arnold</li>
+<li>Maxwell</li>
+<li>Octane</li>
+<li>Indigo</li>
+<li>FStorm</li>
+
+</ul>
+
+</section>
+<section id="slide-orgf4c1324-split">
+<p>
+GPU-accelerated renderers can be unbiased, like Indigo or Octane, or biased like Redshift.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgf8170e1">
+<h2 id="orgf8170e1">UV Mapping</h2>
+<p>
+It is a two part process
+</p>
+<ul>
+<li>UV unwrapping</li>
+<li>UV layout</li>
+
+</ul>
+
+<div class="figure">
+<p><img src="./images/Texture_mapping_demonstration_animation.gif" alt="Texture_mapping_demonstration_animation.gif" />
+</p>
+</div>
+
+</section>
+<section id="slide-org288a24e">
+<h3 id="org288a24e">UV mapping is boring</h3>
+<ul>
+<li>Its very repetative</li>
+<li>It takes time</li>
+<li>Its a thankless job</li>
+<li><b>There exists an alternative</b></li>
+
+</ul>
+
+</section>
+<section id="slide-orgb974d8f">
+<h4 id="orgb974d8f">Ptex</h4>
+<ul>
+<li>Walt Disney Animation Studios introduced Ptex in 2008.</li>
+<li>Per-face Texturing</li>
+
+</ul>
+
+<div class="figure">
+<p><img src="./images/Ptex.jpg" alt="Ptex.jpg" />
+</p>
+</div>
+
+</section>
+<section id="slide-orgea1424a">
+<h4 id="orgea1424a">Pros</h4>
+<ul>
+<li>No UV assignment is required! Ptex applies a separate texture to each face of a subdivision or polygon mesh.</li>
+<li>The Ptex file format can efficiently store hundreds of thousands of texture images in a single file.</li>
+
+</ul>
+
+</section>
+<section id="slide-org0aa9383">
+<h4 id="org0aa9383">Cons</h4>
+<ul>
+<li>Not transferable.</li>
+<li>Cannot work in 2D softwares like photoshop.</li>
+
+</ul>
+
+</section>
+<section id="slide-org071f6f4">
+<h3 id="org071f6f4">I'm sorry but UV is the Industry Standard</h3>
+<ul>
+<li>There are some tools and plugins available to ease the pain</li>
+<li>Maya Bonus tools</li>
+<li>Unwrella</li>
+<li>Unwrap Pro</li>
+<li>Headus</li>
+<li>Magic UV</li>
+
+</ul>
+
+</section>
+<section id="slide-org8e966f9">
+<h3 id="org8e966f9">UV Layout UDIM</h3>
+
+<div class="figure">
+<p><img src="./images/udim_tiles.png" alt="udim_tiles.png" />
+</p>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org70dfc3f">
+<h2 id="org70dfc3f">Shading</h2>
+<p>
+Consists of three main parts.
+</p>
+<ul>
+<li>Material</li>
+<li>Shader</li>
+<li>Texture</li>
+
+</ul>
+
+</section>
+<section id="slide-orgc9bc988">
+<h3 id="orgc9bc988">What is a Material?</h3>
+<ul>
+<li>The material typically contains all the properties of how the model looks.</li>
+<li>Sometimes in a 3D software a material and shader mean the same thing.</li>
+
+</ul>
+</section>
+<section id="slide-org4087674">
+<h3 id="org4087674">What is a Shader?</h3>
+<ul>
+<li>A shader is an operation performed at render-time.</li>
+<li>The process of assigning the colour to a pixel by the renderer is called "shading".</li>
+<li>The shader has various input parameters that allows for artistic control over what the shader does (like diffuse colour, roughness, etc.).</li>
+
+</ul>
+</section>
+<section id="slide-org48b7826">
+<h4 id="org48b7826">Did you know!</h4>
+<ul>
+<li>Lights also have shaders that determine how those lights are to be defined: area, point, IES profiles, light intensity based on direction, etc.</li>
+<li>Cameras also have shaders. You can define the lens shape among other things.</li>
+
+</ul>
+</section>
+<section id="slide-org0e384f2">
+<h3 id="org0e384f2">What is a Texture?</h3>
+<ul>
+<li>In cg speak, a texture is an image (usually) that shaders use to assist in the shading process.</li>
+<li>the most common use of textures is to project them onto your geometry and apply them as a color map.</li>
+<li>Two Types
+<ul>
+<li>Color (Diffuse)</li>
+<li>Greyscale (Height, Roughness)</li>
+
+</ul></li>
+
+</ul>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org19af167">
+<h2 id="org19af167">Shaders</h2>
+<div class="outline-text-2" id="text-org19af167">
+</div>
+</section>
+<section id="slide-orged2494f">
+<h3 id="orged2494f">RSL Surface Sader</h3>
+<p>
+surface
+constant<sub>test1</sub>(float  Kfb = 1)
+{
+color  surfcolor = color(0.3, 0.9, 0.5);
+</p>
+
+<p>
+Oi = Os;
+Ci = Oi * Cs * surfcolor * Kfb;
+}
+<img src="./images/constant_test1.png" alt="constant_test1.png" />
+</p>
+
+<p>
+<a href="http://www.fundza.com/rman_shaders/surface/index.html">http://www.fundza.com/rman_shaders/surface/index.html</a>
+</p>
+
+</section>
+<section id="slide-orgef39c12">
+<h3 id="orgef39c12">OPENGL Shaders</h3>
+<p>
+<a href="https://www.glfw.org/docs/latest/quick.html">https://www.glfw.org/docs/latest/quick.html</a>
+</p>
+
+</section>
+<section id="slide-orgdd75c42">
+<h3 id="orgdd75c42">PBR Shaders</h3>
+<ul>
+<li>Physically based rendering (PBR) is an approach in computer graphics that seeks to render graphics in a way that more accurately models the flow of light in the real world.</li>
+<li>Surfaces</li>
+<li>Volumes</li>
+<li>Light</li>
+
+</ul>
+
+<p>
+<a href="https://academy.substance3d.com/courses/the-pbr-guide-part-1">https://academy.substance3d.com/courses/the-pbr-guide-part-1</a>
+</p>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org7f6ed7e">
+<h2 id="org7f6ed7e">Thank You</h2>
+
+<div class="figure">
+<p><img src="./images/ragecomic-1.png" alt="ragecomic-1.png" />
+</p>
+</div>
+<ul>
+<li>avik.c@whistlingwoods.net</li>
+
+</ul>
+</section>
+</section>
+</div>
+</div>
+<p> Created by aviik. </p>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+width:1200, height:800, margin: 0.1, minScale:0.2, maxScale:2.5,
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+});
+</script>
+</body>
+</html>

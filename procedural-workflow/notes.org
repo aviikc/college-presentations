@@ -1,0 +1,13 @@
+Light source shaders
+- Lights may exist alone or be attached to geometric primitives.
+-  A light source shader calculates the color of the light emitted from a point on the light source towards a point on the surface being illuminated.
+- A light will typically have a color or spectrum, an intensity, a directional dependency and a fall-off with distance.
+
+
+
+Surface shaders
+    Surface shaders are attached to all geometric primitives and are used to model the optical properties of materials from which the primitive was constructed. A surface shader computes the light reflected in a particular direction by summing over the incoming light and considering the properties of the surface.
+
+
+Volume shaders
+    Volume shaders modulate the color of a light ray as it travels through a volume. Volumes are defined as the insides of solid objects. The atmosphere is the initial volume defined before any objects are created.
